@@ -14,7 +14,8 @@ local protection = protectgui or (syn and syn.protect_gui) or (function() end);
 local ScreenGui = Instance.new("ScreenGui");
 protection(ScreenGui);
 ScreenGui.Parent = game.CoreGui or game:GetService("CoreGui");
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+ScreenGui.IgnoreGuiInset = true
 
 local function Draw(properties)
     local frame = Instance.new("Frame")
